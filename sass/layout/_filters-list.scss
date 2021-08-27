@@ -1,9 +1,27 @@
 .filters-list {
-  @include centeredFlex(flex, center, center);
-  // display: flex;
-  // justify-content: center;
-  margin-bottom: 50px;
+  @media screen and(min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  @media screen and(max-width: 767px) {
+    .filters-list__item:nth-child(n + 4) {
+      margin-top: 15px;
+      .filters-list__item:nth-child(3) {
+        margin-right: 0;
+      }
+    }
+  }
+  @media screen and(min-width: 768px) {
+    @include centeredFlex(flex, center, center);
+    margin-bottom: 30px;
+  }
+  @media screen and(min-width: 1200px) {
+    @include centeredFlex(flex, center, center);
+    margin-bottom: 50px;
+  }
 }
+
 .filters-list__btn {
   background-color: $secondary-color;
   border-radius: 4px;
@@ -24,6 +42,7 @@
 .filters-list__item:not(:last-child) {
   margin-right: 8px;
 }
+
 .filters-list__btn:hover,
 .filters-list__btn:focus {
   background: $accent-color;
