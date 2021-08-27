@@ -14,12 +14,7 @@
 .address {
   margin-top: 20px;
 }
-// %address {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 14px;
-//   line-height: 1.7;
-// }
+
 .address__link {
   @extend %address;
   color: rgba(255, 255, 255, 0.6);
@@ -64,40 +59,12 @@
   text-transform: uppercase;
   color: $text-white;
 }
-// .btn-primary {
-//   display: inline-flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 200px;
-//   height: 50px;
-//   font-size: 16px;
-//   line-height: 1.9;
-//   letter-spacing: 0.06em;
-//   color: $text-white;
-//   background: $accent-color;
-//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//   border-radius: 4px;
-//   border: transparent;
-//   transition: background-color 250ms $timing-function;
-//   cursor: pointer;
 
-//   &:hover,
-//   &:focus {
-//     background-color: #188ce8;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//   }
-// }
-
-// .btn-primary__icon {
-//   margin-left: 10px;
-// }
 .footer-form {
   @include centeredFlex(flex, center, center);
-  // display: flex;
-  // align-items: center;
   margin-top: 20px;
 }
-/* .subscription-form__input  */
+
 .footer-form__input {
   width: 358px;
   height: 50px;

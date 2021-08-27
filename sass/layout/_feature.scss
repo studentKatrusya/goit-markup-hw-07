@@ -1,13 +1,29 @@
 .feature {
-  @include centeredFlex(flex, center, center);
+  @media screen and(min-width: 480px) {
+    margin: -15px;
+  }
+  @media screen and(min-width: 768px) {
+    @include centeredFlex(flex, center, center);
+  }
+  @media screen and(min-width: 1200px) {
+    @include centeredFlex(flex, center, center);
+  }
+
   // display: flex;
 }
 
 .feature__item {
-  flex-basis: calc((100%-30 * 3) / 4);
+  text-align: center;
+  margin: 15px;
+  @media screen and(min-width: 768px) {
+    flex-basis: calc((100%-30 * 2) / 2);
+  }
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and(min-width: 1200px) {
+    flex-basis: calc((100%-30 * 3) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -37,7 +53,7 @@
   letter-spacing: 0.03em;
 }
 .feature__box {
-  @include centeredFlex(flex, center, center);
+  // @include centeredFlex(flex, center, center);
   padding: 25px 0;
   background-color: $secondary-color;
   // display: flex;
